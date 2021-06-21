@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 /*========== VARIABLES CSS ==========*/
 :root {
   --header-height: 3.5rem;
-  --nav-width: 219px;
+  --nav-width: 215px;
 
   /*========== Colors ==========*/
   --first-color: #006d77;
@@ -43,7 +43,7 @@
 
 body {
   margin: var(--header-height) 0 0 0;
-  padding: 1rem 1rem 0;
+  padding: 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -200,6 +200,37 @@ img {
   margin-top: 4rem;
 }
 
+/* =========== CONTENT ============ */
+.hero {
+  position: relative;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.hero__image {
+  min-height: calc(100vh - var(--header-height));
+  object-fit: cover;
+}
+
+.hero__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #ffddd2;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.hero__subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
 /* Dropdown */
 .nav__dropdown {
   overflow: hidden;
@@ -263,7 +294,7 @@ img {
 
 @media screen and (min-width : 768px) {
   body {
-    padding: 1rem 3rem 0 6rem;
+    padding: 0 0 0 56px;
   }
 
   .header {
@@ -296,7 +327,7 @@ img {
   .nav {
     left: 0;
     padding: 1.2rem 1.5rem 3rem;
-    width: 68px;
+    width: 56px;
   }
 
   .nav__items {
@@ -333,5 +364,13 @@ img {
 
   .nav:hover .nav__dropdown-icon {
     opacity: 1;
+  }
+
+  .hero {
+    height: calc(100vh - 64px);
+  }
+  
+  .hero__image {
+    height: calc(100vh - 64px);
   }
 }
